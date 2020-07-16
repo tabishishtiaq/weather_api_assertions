@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="525700fd-5f64-40bd-9d54-d66c63417e41" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1eM5nxU1pfot0CR5iN69ZNLyvbK" />
+  <component name="ProjectViewState">
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.api_functions">
+    <configuration name="api_functions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="weather_api_assertions" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api_functions.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_api_country_code" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="weather_api_assertions" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_api_country_code.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_api_geographical_coordinates" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="weather_api_assertions" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_api_geographical_coordinates.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_api_state_code" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="weather_api_assertions" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_api_state_code.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_api_zip" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="weather_api_assertions" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_api_zip.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.test_api_state_code" />
+      <item itemvalue="Python.test_api_country_code" />
+      <item itemvalue="Python.test_api_geographical_coordinates" />
+      <item itemvalue="Python.test_api_zip" />
+      <item itemvalue="Python.api_functions" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.api_functions" />
+        <item itemvalue="Python.test_api_zip" />
+        <item itemvalue="Python.test_api_state_code" />
+        <item itemvalue="Python.test_api_geographical_coordinates" />
+        <item itemvalue="Python.test_api_country_code" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="525700fd-5f64-40bd-9d54-d66c63417e41" name="Default Changelist" comment="" />
+      <created>1594118792068</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594118792068</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="209" y="51" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594291335932">
+      <screen x="0" y="23" width="1280" height="734" />
+    </state>
+    <state x="209" y="51" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.734@0.23.1280.734" timestamp="1594291335932" />
+    <state width="1259" height="182" key="GridCell.Tab.0.bottom" timestamp="1594905197212">
+      <screen x="0" y="23" width="1280" height="733" />
+    </state>
+    <state width="1259" height="182" key="GridCell.Tab.0.bottom/0.23.1280.733@0.23.1280.733" timestamp="1594905197212" />
+    <state width="1259" height="182" key="GridCell.Tab.0.bottom/0.23.1280.734@0.23.1280.734" timestamp="1594667928044" />
+    <state width="1259" height="182" key="GridCell.Tab.0.bottom/0.23.1280.735@0.23.1280.735" timestamp="1594415738389" />
+    <state width="1259" height="182" key="GridCell.Tab.0.center" timestamp="1594905197210">
+      <screen x="0" y="23" width="1280" height="733" />
+    </state>
+    <state width="1259" height="182" key="GridCell.Tab.0.center/0.23.1280.733@0.23.1280.733" timestamp="1594905197210" />
+    <state width="1259" height="182" key="GridCell.Tab.0.center/0.23.1280.734@0.23.1280.734" timestamp="1594667928043" />
+    <state width="1259" height="182" key="GridCell.Tab.0.center/0.23.1280.735@0.23.1280.735" timestamp="1594415738388" />
+    <state width="1259" height="182" key="GridCell.Tab.0.left" timestamp="1594905197210">
+      <screen x="0" y="23" width="1280" height="733" />
+    </state>
+    <state width="1259" height="182" key="GridCell.Tab.0.left/0.23.1280.733@0.23.1280.733" timestamp="1594905197210" />
+    <state width="1259" height="182" key="GridCell.Tab.0.left/0.23.1280.734@0.23.1280.734" timestamp="1594667928042" />
+    <state width="1259" height="182" key="GridCell.Tab.0.left/0.23.1280.735@0.23.1280.735" timestamp="1594415738387" />
+    <state width="1259" height="182" key="GridCell.Tab.0.right" timestamp="1594905197211">
+      <screen x="0" y="23" width="1280" height="733" />
+    </state>
+    <state width="1259" height="182" key="GridCell.Tab.0.right/0.23.1280.733@0.23.1280.733" timestamp="1594905197211" />
+    <state width="1259" height="182" key="GridCell.Tab.0.right/0.23.1280.734@0.23.1280.734" timestamp="1594667928043" />
+    <state width="1259" height="182" key="GridCell.Tab.0.right/0.23.1280.735@0.23.1280.735" timestamp="1594415738388" />
+    <state width="1259" height="227" key="GridCell.Tab.1.bottom" timestamp="1594896541736">
+      <screen x="0" y="23" width="1280" height="733" />
+    </state>
+    <state width="1259" height="227" key="GridCell.Tab.1.bottom/0.23.1280.733@0.23.1280.733" timestamp="1594896541736" />
+    <state width="1259" height="227" key="GridCell.Tab.1.center" timestamp="1594896541735">
+      <screen x="0" y="23" width="1280" height="733" />
+    </state>
+    <state width="1259" height="227" key="GridCell.Tab.1.center/0.23.1280.733@0.23.1280.733" timestamp="1594896541735" />
+    <state width="1259" height="227" key="GridCell.Tab.1.left" timestamp="1594896541735">
+      <screen x="0" y="23" width="1280" height="733" />
+    </state>
+    <state width="1259" height="227" key="GridCell.Tab.1.left/0.23.1280.733@0.23.1280.733" timestamp="1594896541735" />
+    <state width="1259" height="227" key="GridCell.Tab.1.right" timestamp="1594896541736">
+      <screen x="0" y="23" width="1280" height="733" />
+    </state>
+    <state width="1259" height="227" key="GridCell.Tab.1.right/0.23.1280.733@0.23.1280.733" timestamp="1594896541736" />
+    <state x="149" y="28" key="SettingsEditor" timestamp="1594291317045">
+      <screen x="0" y="23" width="1280" height="734" />
+    </state>
+    <state x="149" y="28" key="SettingsEditor/0.23.1280.734@0.23.1280.734" timestamp="1594291317045" />
+    <state x="149" y="28" key="SettingsEditor/0.23.1280.735@0.23.1280.735" timestamp="1594118919704" />
+    <state x="319" y="221" key="com.intellij.ide.util.TipDialog" timestamp="1594904826088">
+      <screen x="0" y="23" width="1280" height="733" />
+    </state>
+    <state x="319" y="221" key="com.intellij.ide.util.TipDialog/0.23.1280.733@0.23.1280.733" timestamp="1594904826088" />
+    <state x="319" y="221" key="com.intellij.ide.util.TipDialog/0.23.1280.734@0.23.1280.734" timestamp="1594712264001" />
+    <state x="319" y="221" key="com.intellij.ide.util.TipDialog/0.23.1280.735@0.23.1280.735" timestamp="1594415044744" />
+  </component>
+</project>
