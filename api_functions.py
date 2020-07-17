@@ -1,4 +1,6 @@
 import requests
+import json
+import pytest
 
 
 Api_Key = "c73e48a7ec5a89f57f52c48a792e7064"
@@ -6,7 +8,8 @@ lon= 67.03
 
 lat = 24.87
 
-response = requests.get("https://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid=c73e48a7ec5a89f57f52c48a792e7064".format(lat,lon, Api_Key))
+response = requests.get("https://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid=c73e48a7ec5a89f57f52c48a792e7064&units=metric".format(lat,lon, Api_Key))
+
 def response_code():
     print("response.status_code:")
     print("\t" + str(response.status_code))
@@ -165,23 +168,91 @@ def response_headers():
     except Exception as e:
         print(
             "Access-Control-Allow-Credentials value Assertion is Failed in Response headers['Access-Control-Allow-Credentials'] Due To : " + str(e))
-    # try:
-    #     if 'Access-Control-Allow-Methods' in response.headers:
-    #         assert 'Access-Control-Allow-Methods' in response.headers
-    #         print("Access-Control-Allow-Methods Key Assertion is Passed in response.headers")
+    try:
+        if 'Access-Control-Allow-Methods' in response.headers:
+            assert 'Access-Control-Allow-Methods' in response.headers
+            print("Access-Control-Allow-Methods Key Assertion is Passed in response.headers")
+        else:
+            print("Access-Control-Allow-Methods Key Assertion is Failed in response.headers")
+    except Exception as e:
+        print("Access-Control-Allow-Methods Key Assertion is Failed in response.headers Due To : " + str(e))
+
+    try:
+        if 'GET, POST' in response.headers['Access-Control-Allow-Methods']:
+            assert 'GET, POST' in response.headers['Access-Control-Allow-Methods']
+            print("Access-Control-Allow-Methods Key Value Assertion is Passed in response.headers['Access-Control-Allow-Methods']")
+        else:
+            print("Access-Control-Allow-Methods Key Value Assertion is Failed in response.headers['Access-Control-Allow-Methods']")
+    except Exception as e:
+        print("Access-Control-Allow-Methods Key Value Assertion is Failed in response.headers['Access-Control-Allow-Methods'] Due To :" + str(e))
 response_headers()
 
-# def response_content():
-#     print("response.content:")
-#     print("\t" + str(response.content))
-#     expected_content = b'{"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":290.6,"feels_like":287.43,"temp_min":289.26,"temp_max":292.04,"pressure":1021,"humidity":51},"visibility":10000,"wind":{"speed":3.6,"deg":250},"clouds":{"all":2},"dt":1594109707,"sys":{"type":1,"id":1414,"country":"GB","sunrise":1594093958,"sunset":1594153077},"timezone":3600,"id":2643743,"name":"London","cod":200}'
-#
-#     assert 'coord' in response.json()
-#     assert 'lon' in response.json()['coord']
-#     assert 'lat' in response.json()['coord']
-#     assert 'weather' in response.json()
-#     assert 'id' in response.json()['weather'][0]
-#     assert 'main' in response.json()['weather'][0]
+def response_content():
+    print("response.content:")
+    print("\t" + str(response.content))
+
+    expected_content = b'{"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":290.6,"feels_like":287.43,"temp_min":289.26,"temp_max":292.04,"pressure":1021,"humidity":51},"visibility":10000,"wind":{"speed":3.6,"deg":250},"clouds":{"all":2},"dt":1594109707,"sys":{"type":1,"id":1414,"country":"GB","sunrise":1594093958,"sunset":1594153077},"timezone":3600,"id":2643743,"name":"London","cod":200}'
+
+    try:
+        if 'coord' in str(response.content):
+            assert 'coord' in str(response.content)
+            print("Coord Key Assertion is Passed in Response Content")
+        else:
+            print("Coord Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Coord Key Assertion is Failed in Response Content Due To : " + str(e))
+
+    try:
+        if 'lon' in str(response.content):
+            assert 'lon' in str(response.content)
+            print("Coord Key Value Assertion is Passed in Response Content")
+        else:
+            print("Coord Key Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Coord Key Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+
+        if '67.03' in str(response.content):
+             assert '67.03' in str(response.content)
+             print("Lon Key Value Assertion is Passed in Response Content")
+        else:
+            print("Lon Key Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Lon Key Value Assertion is Failed in Response Content Due To:" + str(e))
+
+    try:
+        if 'lat' in str(response.content):
+            assert 'lat' in str(response.content)
+            print("Lat Key Assertion is Passed in Response Content")
+        else:
+            print("Lat Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Lat Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'weather' in str(response.content):
+            assert 'weather' in str(response.content)
+            print("Weather Key Assertion is Passed in Response Content")
+        else:
+            print("Weather Key Assertion is Passed in Response Content")
+    except Exception as e:
+        print("Weather Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'id' in str(response.content):
+            assert 'id' in str(response.content)
+            print("ID Key assertion is Passed in Response Content")
+        else:
+            print("ID Key assertion is Failed in Response Content")
+    except Exception as e:
+        print("ID Key assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if '711' in str(response.content):
+            assert '711' in str(response.content)
+            print("Weather Key Value ID Assertion is Passed in Response Content")
+        else:
+            print("Weather Key Value ID Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Weather Key Value ID Assertion is Failed in Response Content Due To : " + str(e))
+    # assert 'main' in response.json()['weather'][0]
 #     assert 'description' in response.json()['weather'][0]
 #     assert 'icon' in response.json()['weather'][0]
 #     assert 'base' in response.json()
@@ -211,7 +282,7 @@ response_headers()
 #     assert 'cod' in response.json()
 #
 #
-# response_content()
+response_content()
 # def response_url():
 #     print("response.url:")
 #     print("\t" + str(response.url))
