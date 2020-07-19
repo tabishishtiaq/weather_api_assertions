@@ -245,27 +245,206 @@ def response_content():
     except Exception as e:
         print("ID Key assertion is Failed in Response Content Due To : " + str(e))
     try:
-        if '711' in str(response.content):
-            assert '711' in str(response.content)
+        if '802' in str(response.content):
+            assert '802' in str(response.content)
             print("Weather Key Value ID Assertion is Passed in Response Content")
         else:
             print("Weather Key Value ID Assertion is Failed in Response Content")
     except Exception as e:
         print("Weather Key Value ID Assertion is Failed in Response Content Due To : " + str(e))
-    # assert 'main' in response.json()['weather'][0]
-#     assert 'description' in response.json()['weather'][0]
-#     assert 'icon' in response.json()['weather'][0]
-#     assert 'base' in response.json()
-#     assert 'main' in response.json()
-#     assert 'temp' in response.json()['main']
-#     assert 'feels_like' in response.json()['main']
-#     assert 'temp_min' in response.json()['main']
-#     assert 'temp_max' in response.json()['main']
-#     assert 'pressure' in response.json()['main']
-#     assert 'humidity' in response.json()['main']
-#     assert 'visibility' in response.json()
-#     assert 'wind' in response.json()
-#     assert 'speed' in response.json()['wind']
+    try:
+        if 'main' in str(response.content):
+            assert 'main' in str(response.content)
+            print("Main Key Assertion is Passed in Response Content")
+        else:
+            print("Main Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Main Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if "Clouds" in str(response.content):
+            assert "Clouds" in str(response.content)
+            print("Main Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Main Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Main Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'description' in str(response.content):
+            assert 'description' in str(response.content)
+            print("Description Key Assertion is Passed in Response Content")
+        else:
+            print("Description Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Description Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if "scattered clouds" in str(response.content):
+            assert "scattered clouds" in str(response.content)
+            print("Description Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Description Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Description Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'icon' in str(response.content):
+            assert 'icon' in str(response.content)
+            print("Icon Key Assertion is Passed in Response Content")
+        else:
+            print("Icon Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Icon Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if "03n" in str(response.content):
+            assert "03n" in str(response.content)
+            print("Icon Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Icon Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Icon Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'base' in str(response.content):
+            assert 'base' in str(response.content)
+            print("Base Key Assertion is Passed in Response Content")
+        else:
+            print("Base Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Base Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if "stations" in str(response.content):
+            assert "stations" in str(response.content)
+            print("Base Key Value's Assertion is Passed in Response Content")
+        else:
+            print("Base Key Value's Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Base Key Value's Assertion is Failed in Response Content Due To : " + str(e))
+
+    try:
+        if 'main' in str(response.content):
+            assert 'main' in str(response.content)
+            print("Main Key Assertion is Passed in Response Content")
+        else:
+            print("Main Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Main Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'temp' in str(response.content):
+            assert 'temp' in str(response.content)
+            print("Main Key's Value Assertion is Passed in Response content")
+        else:
+            print("Main Key's Value Assertion is Failed in Response content")
+    except Exception as e:
+        print("Main Key's Value Assertion is Failed in Response content Due To : " + str(e))
+    try:
+        if '31' in str(response.content):
+            assert '31' in str(response.content)
+            print("Temp Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Temp Key's Value Assertion is Failed in Response Content")
+    except Exception in e:
+        print("Temp Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'feels_like' in str(response.content):
+            assert 'feels_like' in str(response.content)
+            print("Feels Like Key Assertion is Passed in Response Content")
+        else:
+            print("Feels Like Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Feels Like Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'temp_min' in str(response.content):
+            assert 'temp_min' in str(response.content)
+            print("Temp Min Key Assertion is Passed in Response Content")
+        else:
+            print("Temp Min Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Temp Min Key Assertion is Failed in Response Content Due To " + str(e))
+    try:
+        if '31' in str(response.content):
+            assert '31' in str(response.content)
+            print("Temp Min Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Temp Min Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Temp Min Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'temp_max' in str(response.content):
+            assert 'temp_max' in str(response.content)
+            print("Temp Max Key Assertion is Passed in Response Content")
+        else:
+            print("Temp Max Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Temp Max Key Assertion is Failed in Response Content Due To : "  + str(e))
+    try:
+        if '31' in str(response.content):
+            assert '31' in str(response.content)
+            print("Temp Max Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Temp Max Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Temp Max Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'pressure' in str(response.content):
+            assert 'pressure' in str(response.content)
+            print("Pressure Key Assertion is Passed in Response Content")
+        else:
+            print("Pressure Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Pressure Key Assertion is Failed in Response Content Due To " + str(e))
+    try:
+        if '1001' in str(response.content):
+            assert '1001' in str(response.content)
+            print("Pressure Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Pressure Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Pressure Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'humidity' in str(response.content):
+            assert 'humidity' in str(response.content)
+            print("Humidity Key Assertion is Passed in Response Content")
+        else:
+            print("Humidity Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Humidity Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if '66' in str(response.content):
+            assert '66' in str(response.content)
+            print("Humidity Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Humidity Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Humidity Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'visibility' in str(response.content):
+            assert 'visibility' in str(response.content)
+            print('Visibility Key Assertion is Passed in Response Content')
+        else:
+            print('Visibility Key Assertion is Failed in Response Content')
+    except Exception as e:
+        print('Visibility Key Assertion is Failed in Response Content Due To : ' + str(e))
+    try:
+        if '7000' in str(response.content):
+            assert '7000' in str(response.content)
+            print("Visibility Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Visibility Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Visibility Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'wind' in str(response.content):
+            assert 'wind' in str(response.content)
+            print("Wind Key Assertion is Passed in Response Content")
+        else:
+            print("Wind Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Wind Key Assertion is Failed in Response Content Due To :  " + str(e))
+    try:
+        if 'speed' in str(response.content):
+            assert 'speed' in str(response.content)
+            print("Wind Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Wind Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Wind Key's Value Assertion is Failed in Response Content Due To : " + str(e))
 #     assert 'deg' in response.json()['wind']
 #     assert 'clouds' in response.json()
 #     assert 'all' in response.json()['clouds']
