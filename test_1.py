@@ -54,7 +54,7 @@ import pytest
 Api_Key = "7dc9cbabc1c775acfae4bf280794a94d"
 city = "London"
 
-response = requests.get("https://api.openweathermap.org/data/2.5/weather?q={}&appid={}".format(city, Api_Key))
+response = requests.get("https://api.openweathermap.org/data/2.5/weather?q={}&appid={}&units=metric".format(city, Api_Key))
 print("response.status_code:")
 print("\t" + str(response.status_code))
 expected_status_code = 200
@@ -71,39 +71,39 @@ assert "[GET]" in str(response.request)
 print("response.text:")
 print("\t" + str(response.text))
 expected_text = {"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"base":"stations","main":{"temp":289.21,"feels_like":285.21,"temp_min":288.15,"temp_max":290.93,"pressure":1023,"humidity":42},"visibility":10000,"wind":{"speed":3.6,"deg":300},"clouds":{"all":0},"dt":1594072361,"sys":{"type":1,"id":1414,"country":"GB","sunrise":1594007503,"sunset":1594066713},"timezone":3600,"id":2643743,"name":"London","cod":200}
-assert 'coord' in response.json()
-assert 'lon' in response.json()['coord']
-assert 'lat' in response.json()['coord']
-assert 'weather' in response.json()
-assert 'id' in response.json()['weather'][0]
-assert 'main' in response.json()['weather'][0]
-assert 'description' in response.json()['weather'][0]
-assert 'icon' in response.json()['weather'][0]
-assert 'base' in response.json()
-assert 'main' in response.json()
-assert 'temp' in response.json()['main']
-assert 'feels_like' in response.json()['main']
-assert 'temp_min' in response.json()['main']
-assert 'temp_max' in response.json()['main']
-assert 'pressure' in response.json()['main']
-assert 'humidity' in response.json()['main']
-assert 'visibility' in response.json()
-assert 'wind' in response.json()
-assert 'speed' in response.json()['wind']
-assert 'deg' in response.json()['wind']
-assert 'clouds' in response.json()
-assert 'all' in response.json()['clouds']
-assert 'dt' in response.json()
-assert 'sys' in response.json()
-assert 'type' in response.json()['sys']
-assert 'id' in response.json()['sys']
-assert 'country' in response.json()['sys']
-assert 'sunrise' in response.json()['sys']
-assert 'sunset' in response.json()['sys']
-assert 'timezone' in response.json()
-assert 'id' in response.json()
-assert 'name' in response.json()
-assert 'cod' in response.json()
+assert 'coord' in str(response.text)
+assert 'lon' in str(response.text)
+assert 'lat' in str(response.text)
+assert 'weather' in str(response.text)
+assert 'id' in str(response.text)
+assert 'main' in str(response.text)
+assert 'description' in str(response.text)
+assert 'icon' in str(response.text)
+assert 'base' in str(response.text)
+assert 'main' in str(response.text)
+assert 'temp' in str(response.text)
+assert 'feels_like' in str(response.text)
+assert 'temp_min' in str(response.text)
+assert 'temp_max' in str(response.text)
+assert 'pressure' in str(response.text)
+assert 'humidity' in str(response.text)
+assert 'visibility' in str(response.text)
+assert 'wind' in str(response.text)
+assert 'speed' in str(response.text)
+assert 'deg' in str(response.text)
+assert 'clouds' in str(response.text)
+assert 'all' in str(response.text)
+assert 'dt' in str(response.text)
+assert 'sys' in str(response.text)
+assert 'type' in str(response.text)
+assert 'id' in str(response.text)
+assert 'country' in str(response.text)
+assert 'sunrise' in str(response.text)
+assert 'sunset' in str(response.text)
+assert 'timezone' in str(response.text)
+assert 'id' in str(response.text)
+assert 'name' in str(response.text)
+assert 'cod' in str(response.text)
 
 print("response.headers:")
 print("\t" + str(response.headers))
@@ -122,39 +122,39 @@ print("response.content:")
 print("\t" + str(response.content))
 expected_content = b'{"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"base":"stations","main":{"temp":290.6,"feels_like":287.43,"temp_min":289.26,"temp_max":292.04,"pressure":1021,"humidity":51},"visibility":10000,"wind":{"speed":3.6,"deg":250},"clouds":{"all":2},"dt":1594109707,"sys":{"type":1,"id":1414,"country":"GB","sunrise":1594093958,"sunset":1594153077},"timezone":3600,"id":2643743,"name":"London","cod":200}'
 
-assert 'coord' in response.json()
-assert 'lon' in response.json()['coord']
-assert 'lat' in response.json()['coord']
-assert 'weather' in response.json()
-assert 'id' in response.json()['weather'][0]
-assert 'main' in response.json()['weather'][0]
-assert 'description' in response.json()['weather'][0]
-assert 'icon' in response.json()['weather'][0]
-assert 'base' in response.json()
-assert 'main' in response.json()
-assert 'temp' in response.json()['main']
-assert 'feels_like' in response.json()['main']
-assert 'temp_min' in response.json()['main']
-assert 'temp_max' in response.json()['main']
-assert 'pressure' in response.json()['main']
-assert 'humidity' in response.json()['main']
-assert 'visibility' in response.json()
-assert 'wind' in response.json()
-assert 'speed' in response.json()['wind']
-assert 'deg' in response.json()['wind']
-assert 'clouds' in response.json()
-assert 'all' in response.json()['clouds']
-assert 'dt' in response.json()
-assert 'sys' in response.json()
-assert 'type' in response.json()['sys']
-assert 'id' in response.json()['sys']
-assert 'country' in response.json()['sys']
-assert 'sunrise' in response.json()['sys']
-assert 'sunset' in response.json()['sys']
-assert 'timezone' in response.json()
-assert 'id' in response.json()
-assert 'name' in response.json()
-assert 'cod' in response.json()
+assert 'coord' in str(response.content)
+assert 'lon' in str(response.content)
+assert 'lat' in str(response.content)
+assert 'weather' in str(response.content)
+assert 'id' in str(response.content)
+assert 'main' in str(response.content)
+assert 'description' in str(response.content)
+assert 'icon' in str(response.content)
+assert 'base' in str(response.content)
+assert 'main' in str(response.content)
+assert 'temp' in str(response.content)
+assert 'feels_like' in str(response.content)
+assert 'temp_min' in str(response.content)
+assert 'temp_max' in str(response.content)
+assert 'pressure' in str(response.content)
+assert 'humidity' in str(response.content)
+assert 'visibility' in str(response.content)
+assert 'wind' in str(response.content)
+assert 'speed' in str(response.content)
+assert 'deg' in str(response.content)
+assert 'clouds' in str(response.content)
+assert 'all' in str(response.content)
+assert 'dt' in str(response.content)
+assert 'sys' in str(response.content)
+assert 'type' in str(response.content)
+assert 'id' in str(response.content)
+assert 'country' in str(response.content)
+assert 'sunrise' in str(response.content)
+assert 'sunset' in str(response.content)
+assert 'timezone' in str(response.content)
+assert 'id' in str(response.content)
+assert 'name' in str(response.content)
+assert 'cod' in str(response.content)
 
 
 print("response.url:")

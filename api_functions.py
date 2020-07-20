@@ -8,7 +8,8 @@ lon= 67.03
 
 lat = 24.87
 
-response = requests.get("https://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid=c73e48a7ec5a89f57f52c48a792e7064&units=metric".format(lat,lon, Api_Key))
+response = requests.get("https://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid={}&units=metric".format(lat,lon, Api_Key))
+
 
 def response_code():
     print("response.status_code:")
@@ -21,7 +22,7 @@ def response_code():
             print("Response Status Code Assertion is Passed ")
         else:
             print("Response Status Code Assertion is Failed ")
-    except Exception as e:
+    except requests.RequestException as e:
         print("Response Status Code Assertion is Failes Due To : " + str(e))
 response_code()
 
@@ -36,12 +37,55 @@ def response_request():
             print("Response Request Assertion is Passed")
         else:
             print("Response Request Assertion is Passed")
-    except Exception as e:
+    except requests.RequestException as e:
         print("Response Request Assertion is Failed Due To : " + str(e))
 
 
 
 response_request()
+
+
+print("response.text:")
+print("\t" + str(response.text))
+expected_text = {"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"base":"stations","main":{"temp":289.21,"feels_like":285.21,"temp_min":288.15,"temp_max":290.93,"pressure":1023,"humidity":42},"visibility":10000,"wind":{"speed":3.6,"deg":300},"clouds":{"all":0},"dt":1594072361,"sys":{"type":1,"id":1414,"country":"GB","sunrise":1594007503,"sunset":1594066713},"timezone":3600,"id":2643743,"name":"London","cod":200}
+assert 'coord' in str(response.text)
+assert 'lon' in str(response.text)
+assert 'lat' in str(response.text)
+assert 'weather' in str(response.text)
+assert 'id' in str(response.text)
+assert 'main' in str(response.text)
+assert 'description' in str(response.text)
+assert 'icon' in str(response.text)
+assert 'base' in str(response.text)
+assert 'main' in str(response.text)
+assert 'temp' in str(response.text)
+assert 'feels_like' in str(response.text)
+assert 'temp_min' in str(response.text)
+assert 'temp_max' in str(response.text)
+assert 'pressure' in str(response.text)
+assert 'humidity' in str(response.text)
+assert 'visibility' in str(response.text)
+assert 'wind' in str(response.text)
+assert 'speed' in str(response.text)
+assert 'deg' in str(response.text)
+assert 'clouds' in str(response.text)
+assert 'all' in str(response.text)
+assert 'dt' in str(response.text)
+assert 'sys' in str(response.text)
+assert 'type' in str(response.text)
+assert 'id' in str(response.text)
+assert 'country' in str(response.text)
+assert 'sunrise' in str(response.text)
+assert 'sunset' in str(response.text)
+assert 'timezone' in str(response.text)
+assert 'id' in str(response.text)
+assert 'name' in str(response.text)
+assert 'cod' in str(response.text)
+
+
+
+
+
 
 def response_headers():
     print("response.headers:")
@@ -53,7 +97,7 @@ def response_headers():
             print('Server Key Assertion in Response Headers is Passed')
         else:
             print('Server Key Assertion in Response Headers is Failed')
-    except Exception as e:
+    except requests.RequestException as e:
         print('Server Key Assertion in Response Headers is Failed Due To : ' + str(e))
     try:
         if 'openresty' == response.headers['Server']:
@@ -445,92 +489,378 @@ def response_content():
             print("Wind Key's Value Assertion is Failed in Response Content")
     except Exception as e:
         print("Wind Key's Value Assertion is Failed in Response Content Due To : " + str(e))
-#     assert 'deg' in response.json()['wind']
-#     assert 'clouds' in response.json()
-#     assert 'all' in response.json()['clouds']
-#     assert 'dt' in response.json()
-#     assert 'sys' in response.json()
-#     assert 'type' in response.json()['sys']
-#     assert 'id' in response.json()['sys']
-#     assert 'country' in response.json()['sys']
-#     assert 'sunrise' in response.json()['sys']
-#     assert 'sunset' in response.json()['sys']
-#     assert 'timezone' in response.json()
-#     assert 'id' in response.json()
-#     assert 'name' in response.json()
-#     assert 'cod' in response.json()
-#
-#
+    try:
+         if '5.1' in str(response.content):
+             assert '5.1' in str(response.content)
+             print("Speed Key's Value Assertion is Passed in Response Content")
+         else:
+            print("Speed Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Speed Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'deg' in str(response.content):
+            assert 'deg' in str(response.content)
+            print("Degree Key Assertion is Passed in Response Content")
+        else:
+            print("Degree Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Degree Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if '200' in str(response.content):
+            assert '200' in str(response.content)
+            print("Degree Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Degree Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Degree Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'clouds' in str(response.content):
+            assert 'clouds' in str(response.content)
+            print("Clouds Key Assertion is Passed in Response Content")
+        else:
+            print("Clouds Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Clouds Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'all' in str(response.content):
+            assert 'all' in str(response.content)
+            print("Clouds Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Clouds Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Clouds Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if '40' in str(response.content):
+            assert '40' in str(response.content)
+            print("Clouds Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Clouds Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Clouds Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'dt' in str(response.content):
+            assert 'dt' in str(response.content)
+            print("DT Key Assertion is Passed in Response Content")
+        else:
+            print("DT Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("DT Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'sys' in str(response.content):
+            assert 'sys' in str(response.content)
+            print("SYS Key Assertion is Passed in Response Content")
+        else:
+            print("SYS Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("SYS Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'type' in str(response.content):
+            assert 'type' in str(response.content)
+            print("SYS Key's Value Assertion is Passed in Response Content")
+        else:
+            print("SYS Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("SYS Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if '1' in str(response.content):
+            assert '1' in str(response.content)
+            print("Type Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Type Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Type Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'id' in str(response.content):
+            assert 'id' in str(response.content)
+            print("ID Key  Assertion is Passed in Response Content")
+        else:
+            print("ID Key  Assertion is Failed in Response Content")
+    except Exception as e:
+        print("ID Key  Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if '7576' in str(response.content):
+            assert '7576' in str(response.content)
+            print("Id Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Id Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Id Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'country' in str(response.content):
+            assert 'country' in str(response.content)
+            print("Country Key Assertion is Passed in Response Content")
+        else:
+            print("Country Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Country Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'PK' in str(response.content):
+            assert 'PK' in str(response.content)
+            print("Country Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Country Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Country Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'sunrise' in str(response.content):
+             assert 'sunrise' in str(response.content)
+             print("Sunrise Key Assertion is Passed in Response Content")
+        else:
+            print("Sunrise Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Sunrise Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if '1595206435' in str(response.content):
+            assert '1595206435' in str(response.content)
+            print("Sunrise Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Sunrise Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Sunrise Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'sunset' in str(response.content):
+            assert 'sunset' in str(response.content)
+            print("Sunset Key Assertion is Passed in Response Content")
+        else:
+            print("Sunset Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Sunset Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'timezone' in str(response.content):
+            assert  'timezone' in str(response.content)
+            print("Timezone Key Assertion is Passed in Response Content")
+        else:
+            print("Timezone Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Timezone Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if '18000' in str(response.content):
+            assert '18000' in str(response.content)
+            print("Timezone Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Timezone Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Timezone Key's Value Assertion is Failed in Response Content")
+    try:
+        if 'id' in str(response.content):
+            assert 'id' in str(response.content)
+            print("ID Key Assertion is Passed in Response Content")
+        else:
+            print("ID Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("ID Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if '1174872' in str(response.content):
+            assert '1174872' in str(response.content)
+            print("ID Key's Value Assertion is Passed in Response Content")
+        else:
+            print("ID Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("ID Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'name' in str(response.content):
+            assert 'name' in str(response.content)
+            print("Name Key Assertion is Passed in Response Content")
+        else:
+            print("Name Key Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Name Key Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if 'Karachi' in str(response.content):
+            assert 'Karachi' in str(response.content)
+            print("Name Key's Value Assertion is Passed in Response Content")
+        else:
+            print("Name Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("Name Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+    try:
+        if  'cod' in str(response.content):
+            assert 'cod' in str(response.content)
+            print('COD Key Assertion is Passed in Response Content')
+        else:
+            print('COD Key Assertion is Failed in Response Content')
+    except Exception as e:
+        print('COD Key Assertion is Failed in Response Content Due To : ' + str(e))
+    try:
+        if '200' in str(response.content):
+            assert '200' in str(response.content)
+            print("COD Key's Value Assertion is Passed in Response Content")
+        else:
+            print("COD Key's Value Assertion is Failed in Response Content")
+    except Exception as e:
+        print("COD Key's Value Assertion is Failed in Response Content Due To : " + str(e))
+
+
 response_content()
-# def response_url():
-#     print("response.url:")
-#     print("\t" + str(response.url))
-#     expected_url = 'https://api.openweathermap.org/data/2.5/weather?lat=24.87&lon=67.03&appid=c73e48a7ec5a89f57f52c48a792e7064'
-#     assert "24.87" in response.url
-#     assert "67.03" in response.url
-#     assert "c73e48a7ec5a89f57f52c48a792e7064"
-#     assert "https" in response.url
-# response_url()
-#
-# def response_cookies():
-#     print("response.cookies:")
-#     print("\t" + str(response.cookies))
-#     expected_cookies = "<RequestsCookieJar[]>"
-#     assert "[]" in str(response.cookies)
-#
-#
-# def response_encoding():
-#     print("response.encoding:")
-#     print("\t" + str(response.encoding))
-#     expected_encoding = "utf-8"
-#     assert "utf-8" in response.encoding
-#
-#
-# def apparent_encoding():
-#     print("response.apparent_encoding:")
-#     print("\t" + str(response.apparent_encoding))
-#     expected_apparent_encoding = "ascii"
-#     assert "ascii" in response.apparent_encoding
-#
-#
-# def response_elapsed():
-#     print("response.elapsed:")
-#     print("\t" + str(response.elapsed))
-#     assert response.elapsed == response.elapsed
-#
-#
-# def response_history():
-#     print("response.history:")
-#     print("\t" + str(response.history))
-#     expected_history = []
-#     assert expected_history  == response.history
-#     assert "[]" in str(response.history)
-#
-#
-# def permanent_redirect():
-#     print("response.is_permanent_redirect:")
-#     print("\t" + str(response.is_permanent_redirect))
-#     expected_permanent_redirect = False
-#     assert expected_permanent_redirect == response.is_permanent_redirect
-#     assert "False" in str(response.is_permanent_redirect)
-#
-#
-# def is_redirect():
-#     print("response.is_redirect:")
-#     print("\t" + str(response.is_redirect))
-#     expected_response_is_redirect = False
-#     assert expected_response_is_redirect == response.is_redirect
-#     assert "False" in str(response.is_redirect)
-#
-#
-# def response_reason():
-#     print("response.reason:")
-#     print("\t" + str(response.reason))
-#     expected_reason = "OK"
-#     assert expected_reason in response.reason
-#     assert "OK" in str(response.reason)
-#
-#
+def response_url():
+    print("response.url:")
+    print("\t" + str(response.url))
+    expected_url = 'https://api.openweathermap.org/data/2.5/weather?lat=24.87&lon=67.03&appid=c73e48a7ec5a89f57f52c48a792e7064'
+
+    try:
+        if expected_url in response.url:
+            assert expected_url in response.url
+            print("URL Assertion is Passed in Response URL")
+        else:
+            print("URL Assertion is Failed in Response URL")
+    except Exception as e:
+        print("URL Assertion is Failed in Response URL Due To : " + str(e))
+
+    try:
+        if "https" in response.url:
+            assert "https" in response.url
+            print("API Protocol Value Assertion is Passed in Response URL")
+        else:
+            print("API Protocol Value Assertion is Failed in Response URL")
+    except requests.RequestException as e:
+        print("API Protocol Value Assertion is Failed in Response URL Due To : " + str(e))
+    try:
+        if "24.87" in response.url:
+            assert "24.87" in response.url
+            print("lat Value Assertion is Passed in Response URL")
+        else:
+            print("lat Value Assertion is Failed in Response URL")
+    except requests.RequestException as e:
+        print("lat Value Assertion is Failed in Response URL Due To : " + str(e))
+    try:
+        if "67.03" in response.url:
+            assert "67.03" in response.url
+            print("Lon Value Assertion is Passed in Response URL")
+        else:
+            print("Lon Value Assertion is Failed in Response URL")
+    except requests.RequestException as e:
+        print("Lon Value Assertion is Failed in Response URL Due To : " + str(e))
+    try:
+        if "c73e48a7ec5a89f57f52c48a792e7064" in response.url:
+            assert "c73e48a7ec5a89f57f52c48a792e7064" in response.url
+            print("APPID Value Assertion is Passed in Response URL")
+        else:
+            print("APPID Value Assertion is Failed in Response URL")
+    except requests.RequestException as e:
+        print("APPID Value Assertion is Failed in Response URL Due To : " + str(e))
+    try:
+        if 'units=metric' in response.url:
+            assert 'units=metric' in response.url
+            print("Measurement System Assertion is Passed in Response URL")
+        else:
+            print("Measurement System Assertion is Failed in Response URL")
+    except requests.RequestException as e:
+        print("Measurement System Assertion is Failed in Response URL Due To : " + str(e))
+
+response_url()
+
+def response_cookies():
+    print("response.cookies:")
+    print("\t" + str(response.cookies))
+    expected_cookies = "<RequestsCookieJar[]>"
+    try:
+        if "[]" in str(response.cookies):
+            assert "[]" in str(response.cookies)
+            print("Cookies Assertion is Passed in Response Cookies")
+        else:
+            print("Cookies Assertion is Failed in Response Cookies")
+    except requests.RequestException as e:
+        print("Cookies Assertion is Failes in Response Cookies Due To : " + str(e))
+response_cookies()
+
+def response_encoding():
+    print("response.encoding:")
+    print("\t" + str(response.encoding))
+    expected_encoding = "utf-8"
+    try:
+        if "utf-8" in response.encoding:
+            assert "utf-8" in response.encoding
+            print('Unicode Transformation Format Assertion is Passed in Response Encoding')
+        else:
+            print('Unicode Transformation Format Assertion is Failed in Response Encoding')
+    except requests.RequestException as e:
+        print('Unicode Transformation Format Assertion is Failed in Response Encoding Due To : ' + str(e))
+
+response_encoding()
+def apparent_encoding():
+    print("response.apparent_encoding:")
+    print("\t" + str(response.apparent_encoding))
+    expected_apparent_encoding = "ascii"
+    try:
+        if "ascii" in response.apparent_encoding:
+            assert "ascii" in response.apparent_encoding
+            print("Apparent Encoding Assertion is Passed in Response Apparent Encoding")
+        else:
+            print("Apparent Encoding Assertion is Failed in Response Apparent Encoding")
+    except requests.RequestException as e:
+        print("Apparent Encoding Assertion is Failed in Response Apparent Encoding Due To : " + str(e))
+apparent_encoding()
+
+
+def response_elapsed():
+    print("response.elapsed:")
+    print("\t" + str(response.elapsed))
+    expected_elapsed = str(response.elapsed)
+    try:
+        if expected_elapsed in str(response.elapsed):
+            assert expected_elapsed in str(response.elapsed)
+            print('ELAPSED Assertion is Passed in Response Elapsed')
+        else:
+            print('ELAPSED Assertion is Failed in Response Elapsed')
+    except requests.RequestException as e:
+        print('ELAPSED Assertion is Failed in Response Elapsed Due To : ' + str(e))
+response_elapsed()
+
+def response_history():
+    print("response.history:")
+    print("\t" + str(response.history))
+    try:
+        if "[]" in str(response.history):
+            assert "[]" in str(response.history)
+            print("History Assertion is Passed in Response.History")
+        else:
+            print("History Assertion is Failed in Response.History")
+    except requests.RequestException as e:
+        print("History Assertion is Failed in Response.History Due To : " + str(e))
+
+response_history()
+
+def permanent_redirect():
+    print("response.is_permanent_redirect:")
+    print("\t" + str(response.is_permanent_redirect))
+
+    try:
+        if response.is_permanent_redirect == False:
+            assert "False" in str(response.is_permanent_redirect)
+            print("Permanent Redirect Assertion is Passed in Response Is Permanent Redirect ")
+        else:
+            print("Permanent Redirect Assertion is Failed in Response Is Permanent Redirect ")
+    except requests.RequestException as e:
+        print("Permanent Redirect Assertion is Failed in Response Is Permanent Redirect Due To : " + str(e))
+permanent_redirect()
+def is_redirect():
+    print("response.is_redirect:")
+    print("\t" + str(response.is_redirect))
+
+    try:
+        if response.is_redirect == False:
+            assert "False" in str(response.is_redirect)
+            print("Is Redirect Assertion is Passed in Response Is Redirect")
+        else:
+            print("Is Redirect Assertion is Failed in Response Is Redirect")
+    except requests.RequestException as e:
+        print("Is Redirect Assertion is Failed in Response Is Redirect Due To : " + str(e))
+
+is_redirect()
+
+def response_reason():
+    print("response.reason:")
+    print("\t" + str(response.reason))
+    try:
+        if "OK" in str(response.reason):
+            assert "OK" in str(response.reason)
+            print("Response Reason Value Assertion is Passed in Response Reason")
+        else:
+            print("Response Reason Value Assertion is Failed in Response Reason")
+    except requests.RequestException as e:
+        print("Response Reason Value Assertion is Failed in Response Reason Due To : " + str(e))
+
+response_reason()
 # def response_json():
 #     print("response.json:")
 #     print("\t" + str(response.json()))
