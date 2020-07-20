@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="525700fd-5f64-40bd-9d54-d66c63417e41" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="525700fd-5f64-40bd-9d54-d66c63417e41" name="Default Changelist" comment="api assertion work for 18 july 2020 saturday at 3:44 am">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_api_country_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_api_country_code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_api_geographical_coordinates.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_api_geographical_coordinates.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_api_state_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_api_state_code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_api_zip.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_api_zip.py" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +26,18 @@
       </list>
     </option>
   </component>
+<<<<<<< Updated upstream
+=======
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+>>>>>>> Stashed changes
   <component name="ProjectId" id="1eM5nxU1pfot0CR5iN69ZNLyvbK" />
   <component name="ProjectViewState">
     <option name="foldersAlwaysOnTop" value="false" />
@@ -48,7 +72,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_api_country_code" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="weather_api_assertions" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -60,7 +84,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_api_country_code.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -134,18 +158,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.test_api_state_code" />
-      <item itemvalue="Python.test_api_country_code" />
       <item itemvalue="Python.test_api_geographical_coordinates" />
       <item itemvalue="Python.test_api_zip" />
       <item itemvalue="Python.api_functions" />
+      <item itemvalue="Python.test_1" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.api_functions" />
+        <item itemvalue="Python.test_api_geographical_coordinates" />
+        <item itemvalue="Python.test_1" />
         <item itemvalue="Python.test_api_zip" />
         <item itemvalue="Python.test_api_state_code" />
-        <item itemvalue="Python.test_api_geographical_coordinates" />
-        <item itemvalue="Python.test_api_country_code" />
       </list>
     </recent_temporary>
   </component>
@@ -160,13 +184,34 @@
       <option name="presentableId" value="Default" />
       <updated>1594118792068</updated>
     </task>
+    <task id="LOCAL-00001" summary="api assertion work for 18 july 2020 saturday at 3:44 am">
+      <created>1595025856997</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1595025856997</updated>
+    </task>
+    <task id="LOCAL-00002" summary="api assertion work for 19 july 2020 Sunday at 10:10 PM">
+      <created>1595178696178</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595178696178</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="api assertion work for 18 july 2020 saturday at 3:44 am" />
+    <MESSAGE value="api assertion work for 19 july 2020 Sunday at 10:10 PM" />
+    <option name="LAST_COMMIT_MESSAGE" value="api assertion work for 19 july 2020 Sunday at 10:10 PM" />
   </component>
   <component name="WindowStateProjectService">
     <state x="209" y="51" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594291335932">
       <screen x="0" y="23" width="1280" height="734" />
     </state>
     <state x="209" y="51" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.734@0.23.1280.734" timestamp="1594291335932" />
+<<<<<<< Updated upstream
     <state width="1259" height="182" key="GridCell.Tab.0.bottom" timestamp="1594905197212">
       <screen x="0" y="23" width="1280" height="733" />
     </state>
@@ -191,6 +236,41 @@
     <state width="1259" height="182" key="GridCell.Tab.0.right/0.23.1280.733@0.23.1280.733" timestamp="1594905197211" />
     <state width="1259" height="182" key="GridCell.Tab.0.right/0.23.1280.734@0.23.1280.734" timestamp="1594667928043" />
     <state width="1259" height="182" key="GridCell.Tab.0.right/0.23.1280.735@0.23.1280.735" timestamp="1594415738388" />
+=======
+    <state x="266" y="23" key="CommitChangelistDialog2" timestamp="1595280569387">
+      <screen x="0" y="23" width="1280" height="735" />
+    </state>
+    <state x="266" y="23" key="CommitChangelistDialog2/0.23.1280.734@0.23.1280.734" timestamp="1595178695892" />
+    <state x="266" y="23" key="CommitChangelistDialog2/0.23.1280.735@0.23.1280.735" timestamp="1595280569387" />
+    <state width="1259" height="182" key="GridCell.Tab.0.bottom" timestamp="1595280161692">
+      <screen x="0" y="23" width="1280" height="735" />
+    </state>
+    <state width="1259" height="182" key="GridCell.Tab.0.bottom/0.23.1280.733@0.23.1280.733" timestamp="1594905197212" />
+    <state width="1259" height="182" key="GridCell.Tab.0.bottom/0.23.1280.734@0.23.1280.734" timestamp="1595187062823" />
+    <state width="1259" height="182" key="GridCell.Tab.0.bottom/0.23.1280.735@0.23.1280.735" timestamp="1595280161692" />
+    <state width="1259" height="182" key="GridCell.Tab.0.bottom/0.23.1280.737@0.23.1280.737" timestamp="1594920674925" />
+    <state width="1259" height="182" key="GridCell.Tab.0.center" timestamp="1595280161692">
+      <screen x="0" y="23" width="1280" height="735" />
+    </state>
+    <state width="1259" height="182" key="GridCell.Tab.0.center/0.23.1280.733@0.23.1280.733" timestamp="1594905197210" />
+    <state width="1259" height="182" key="GridCell.Tab.0.center/0.23.1280.734@0.23.1280.734" timestamp="1595187062822" />
+    <state width="1259" height="182" key="GridCell.Tab.0.center/0.23.1280.735@0.23.1280.735" timestamp="1595280161692" />
+    <state width="1259" height="182" key="GridCell.Tab.0.center/0.23.1280.737@0.23.1280.737" timestamp="1594920674923" />
+    <state width="1259" height="182" key="GridCell.Tab.0.left" timestamp="1595280161691">
+      <screen x="0" y="23" width="1280" height="735" />
+    </state>
+    <state width="1259" height="182" key="GridCell.Tab.0.left/0.23.1280.733@0.23.1280.733" timestamp="1594905197210" />
+    <state width="1259" height="182" key="GridCell.Tab.0.left/0.23.1280.734@0.23.1280.734" timestamp="1595187062822" />
+    <state width="1259" height="182" key="GridCell.Tab.0.left/0.23.1280.735@0.23.1280.735" timestamp="1595280161691" />
+    <state width="1259" height="182" key="GridCell.Tab.0.left/0.23.1280.737@0.23.1280.737" timestamp="1594920674922" />
+    <state width="1259" height="182" key="GridCell.Tab.0.right" timestamp="1595280161692">
+      <screen x="0" y="23" width="1280" height="735" />
+    </state>
+    <state width="1259" height="182" key="GridCell.Tab.0.right/0.23.1280.733@0.23.1280.733" timestamp="1594905197211" />
+    <state width="1259" height="182" key="GridCell.Tab.0.right/0.23.1280.734@0.23.1280.734" timestamp="1595187062822" />
+    <state width="1259" height="182" key="GridCell.Tab.0.right/0.23.1280.735@0.23.1280.735" timestamp="1595280161692" />
+    <state width="1259" height="182" key="GridCell.Tab.0.right/0.23.1280.737@0.23.1280.737" timestamp="1594920674924" />
+>>>>>>> Stashed changes
     <state width="1259" height="227" key="GridCell.Tab.1.bottom" timestamp="1594896541736">
       <screen x="0" y="23" width="1280" height="733" />
     </state>
@@ -212,11 +292,37 @@
     </state>
     <state x="149" y="28" key="SettingsEditor/0.23.1280.734@0.23.1280.734" timestamp="1594291317045" />
     <state x="149" y="28" key="SettingsEditor/0.23.1280.735@0.23.1280.735" timestamp="1594118919704" />
+<<<<<<< Updated upstream
     <state x="319" y="221" key="com.intellij.ide.util.TipDialog" timestamp="1594904826088">
       <screen x="0" y="23" width="1280" height="733" />
     </state>
     <state x="319" y="221" key="com.intellij.ide.util.TipDialog/0.23.1280.733@0.23.1280.733" timestamp="1594904826088" />
     <state x="319" y="221" key="com.intellij.ide.util.TipDialog/0.23.1280.734@0.23.1280.734" timestamp="1594712264001" />
     <state x="319" y="221" key="com.intellij.ide.util.TipDialog/0.23.1280.735@0.23.1280.735" timestamp="1594415044744" />
+=======
+    <state x="240" y="129" key="Vcs.Push.Dialog.v2" timestamp="1595280591480">
+      <screen x="0" y="23" width="1280" height="735" />
+    </state>
+    <state x="240" y="129" key="Vcs.Push.Dialog.v2/0.23.1280.734@0.23.1280.734" timestamp="1595178711947" />
+    <state x="240" y="129" key="Vcs.Push.Dialog.v2/0.23.1280.735@0.23.1280.735" timestamp="1595280591480" />
+    <state x="319" y="221" key="com.intellij.ide.util.TipDialog" timestamp="1595263005206">
+      <screen x="0" y="23" width="1280" height="735" />
+    </state>
+    <state x="319" y="221" key="com.intellij.ide.util.TipDialog/0.23.1280.733@0.23.1280.733" timestamp="1594904826088" />
+    <state x="319" y="221" key="com.intellij.ide.util.TipDialog/0.23.1280.734@0.23.1280.734" timestamp="1595169102707" />
+    <state x="319" y="221" key="com.intellij.ide.util.TipDialog/0.23.1280.735@0.23.1280.735" timestamp="1595263005206" />
+    <state x="429" y="313" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595280609110">
+      <screen x="0" y="23" width="1280" height="735" />
+    </state>
+    <state x="429" y="313" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.735@0.23.1280.735" timestamp="1595280609110" />
+    <state x="402" y="27" key="refactoring.ChangeSignatureDialog" timestamp="1595172985849">
+      <screen x="0" y="23" width="1280" height="734" />
+    </state>
+    <state x="402" y="27" key="refactoring.ChangeSignatureDialog/0.23.1280.734@0.23.1280.734" timestamp="1595172985849" />
+    <state x="305" y="81" width="670" height="676" key="search.everywhere.popup" timestamp="1595171840111">
+      <screen x="0" y="23" width="1280" height="734" />
+    </state>
+    <state x="305" y="81" width="670" height="676" key="search.everywhere.popup/0.23.1280.734@0.23.1280.734" timestamp="1595171840111" />
+>>>>>>> Stashed changes
   </component>
 </project>
