@@ -1,4 +1,6 @@
 import requests
+import json
+import jsonpath
 import pytest
 
 
@@ -211,12 +213,14 @@ assert "OK" in str(response.reason)
 
 print("response.json:")
 print("\t" + str(response.json()))
+
 Expected_Response = {'coord': {'lon': -0.13, 'lat': 51.51}, 'weather': [{'id': 800, 'main': 'Clear', 'description': 'clear sky', 'icon': '01d'}], 'base': 'stations', 'main': {'temp': 292.41, 'feels_like': 287.93, 'temp_min': 290.93, 'temp_max': 293.71, 'pressure': 1021, 'humidity': 42}, 'visibility': 10000, 'wind': {'speed': 5.1, 'deg': 290}, 'clouds': {'all': 0}, 'dt': 1594063030, 'sys': {'type': 1, 'id': 1414, 'country': 'GB', 'sunrise': 1594007503, 'sunset': 1594066713}, 'timezone': 3600, 'id': 2643743, 'name': 'London', 'cod': 200}
 assert 'coord' in response.json()
 assert 'lon' in response.json()['coord']
 assert 'lat' in response.json()['coord']
 assert 'weather' in response.json()
 assert 'id' in response.json()['weather'][0]
+
 assert 'main' in response.json()['weather'][0]
 assert 'description' in response.json()['weather'][0]
 assert 'icon' in response.json()['weather'][0]
