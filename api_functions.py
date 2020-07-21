@@ -1765,8 +1765,8 @@ def response_json():
     except requests.RequestException as e:
         print("ID Key's Value Assertion is Failed in Response Json Due To : " + str(e))
     try:
-        if 'name' in str(response.json()['sys']):
-            assert 'name' in str(response.json()['sys'])
+        if 'name' in str(response.json()):
+            assert 'name' in str(response.json())
             print("Name Key Assertion is Passed in Response Json")
         else:
             print("Name Key Assertion is Failed in Response Json")
