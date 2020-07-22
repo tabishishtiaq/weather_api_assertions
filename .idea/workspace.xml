@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="525700fd-5f64-40bd-9d54-d66c63417e41" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_functions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,22 +182,31 @@
       <option name="project" value="LOCAL" />
       <updated>1595370790095</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Api Corrected Update Assertion 22 july 2020 Wednesday at 3:30 AM">
+      <created>1595425956758</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1595425956758</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Api Update Assertion 22 july 2020 Tuesday at 3:30 AM" />
-    <option name="LAST_COMMIT_MESSAGE" value="Api Update Assertion 22 july 2020 Tuesday at 3:30 AM" />
+    <MESSAGE value="Api Corrected Update Assertion 22 july 2020 Wednesday at 3:30 AM" />
+    <option name="LAST_COMMIT_MESSAGE" value="Api Corrected Update Assertion 22 july 2020 Wednesday at 3:30 AM" />
   </component>
   <component name="WindowStateProjectService">
     <state x="209" y="51" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594291335932">
       <screen x="0" y="23" width="1280" height="734" />
     </state>
     <state x="209" y="51" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.734@0.23.1280.734" timestamp="1594291335932" />
-    <state x="273" y="23" key="CommitChangelistDialog2" timestamp="1595370789789">
-      <screen x="0" y="23" width="1280" height="733" />
+    <state x="273" y="23" key="CommitChangelistDialog2" timestamp="1595425956499">
+      <screen x="0" y="23" width="1280" height="734" />
     </state>
     <state x="273" y="23" key="CommitChangelistDialog2/0.23.1280.733@0.23.1280.733" timestamp="1595370789789" />
+    <state x="273" y="23" key="CommitChangelistDialog2/0.23.1280.734@0.23.1280.734" timestamp="1595425956499" />
     <state width="1259" height="182" key="GridCell.Tab.0.bottom" timestamp="1595425890851">
       <screen x="0" y="23" width="1280" height="734" />
     </state>
@@ -249,20 +257,25 @@
     <state x="149" y="28" key="SettingsEditor/0.23.1280.733@0.23.1280.733" timestamp="1595355458828" />
     <state x="149" y="28" key="SettingsEditor/0.23.1280.734@0.23.1280.734" timestamp="1594291317045" />
     <state x="149" y="28" key="SettingsEditor/0.23.1280.735@0.23.1280.735" timestamp="1594118919704" />
-    <state x="240" y="129" key="Vcs.Push.Dialog.v2" timestamp="1595370804506">
-      <screen x="0" y="23" width="1280" height="733" />
+    <state x="240" y="129" key="Vcs.Push.Dialog.v2" timestamp="1595425973991">
+      <screen x="0" y="23" width="1280" height="734" />
     </state>
     <state x="240" y="129" key="Vcs.Push.Dialog.v2/0.23.1280.733@0.23.1280.733" timestamp="1595370804506" />
+    <state x="240" y="129" key="Vcs.Push.Dialog.v2/0.23.1280.734@0.23.1280.734" timestamp="1595425973991" />
     <state x="319" y="221" key="com.intellij.ide.util.TipDialog" timestamp="1595353836781">
       <screen x="0" y="23" width="1280" height="733" />
     </state>
     <state x="319" y="221" key="com.intellij.ide.util.TipDialog/0.23.1280.733@0.23.1280.733" timestamp="1595353836781" />
     <state x="319" y="221" key="com.intellij.ide.util.TipDialog/0.23.1280.734@0.23.1280.734" timestamp="1594712264001" />
     <state x="319" y="221" key="com.intellij.ide.util.TipDialog/0.23.1280.735@0.23.1280.735" timestamp="1595007813635" />
-    <state x="429" y="313" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595370710337">
-      <screen x="0" y="23" width="1280" height="733" />
+    <state x="429" y="313" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595426175551">
+      <screen x="0" y="23" width="1280" height="734" />
     </state>
     <state x="429" y="313" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.733@0.23.1280.733" timestamp="1595370710337" />
-    <state x="429" y="313" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.734@0.23.1280.734" timestamp="1595281322438" />
+    <state x="429" y="313" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.734@0.23.1280.734" timestamp="1595426175551" />
+    <state x="395" y="109" key="git4idea.branch.GitSmartOperationDialog" timestamp="1595426199635">
+      <screen x="0" y="23" width="1280" height="734" />
+    </state>
+    <state x="395" y="109" key="git4idea.branch.GitSmartOperationDialog/0.23.1280.734@0.23.1280.734" timestamp="1595426199635" />
   </component>
 </project>
