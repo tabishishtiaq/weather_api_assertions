@@ -44,6 +44,7 @@ def response_request():
 
 response_request()
 
+
 def response_text():
     print("response.text:")
     print("\t" + str(response.text))
@@ -514,7 +515,6 @@ def response_text():
 
 response_text()
 
-
 def response_headers():
     print("response.headers:")
     print("\t" + str(response.headers))
@@ -646,6 +646,7 @@ def response_headers():
             print("Access-Control-Allow-Methods Key Assertion is Passed in response.headers")
         else:
             print("Access-Control-Allow-Methods Key Assertion is Failed in response.headers")
+
     except requests.RequestException as e:
         print("Access-Control-Allow-Methods Key Assertion is Failed in response.headers Due To : " + str(e))
 
@@ -689,6 +690,7 @@ def response_content():
              print("Lon Key Value Assertion is Passed in Response Content")
         else:
             print("Lon Key Value Assertion is Failed in Response Content")
+
     except requests.RequestException as e:
         print("Lon Key Value Assertion is Failed in Response Content Due To:" + str(e))
 
@@ -698,6 +700,7 @@ def response_content():
             print("Lat Key Assertion is Passed in Response Content")
         else:
             print("Lat Key Assertion is Failed in Response Content")
+
     except requests.RequestException as e:
         print("Lat Key Assertion is Failed in Response Content Due To : " + str(e))
     try:
@@ -710,6 +713,7 @@ def response_content():
     except requests.RequestException as e:
         print("lat Key Value Assertion is Failed in Response Content Due To:" + str(e))
     try:
+
         if 'weather' in str(response.content):
             assert 'weather' in str(response.content)
             print("Weather Key Assertion is Passed in Response Content")
@@ -981,7 +985,7 @@ def response_content():
         else:
             print("DT Key Assertion is Failed in Response Content")
     except requests.RequestException as e:
-        print("DT Key Assertion is Failed in Response Content Due To : " + str(e))
+       print("DT Key Assertion is Failed in Response Content Due To : " + str(e))
     try:
         if 'sys' in str(response.content):
             assert 'sys' in str(response.content)
@@ -1129,8 +1133,6 @@ def response_content():
 
 
 response_content()
-
-
 def response_url():
     print("response.url:")
     print("\t" + str(response.url))
@@ -1216,7 +1218,6 @@ def response_encoding():
         print('Unicode Transformation Format Assertion is Failed in Response Encoding Due To : ' + str(e))
 
 response_encoding()
-
 def apparent_encoding():
     print("response.apparent_encoding:")
     print("\t" + str(response.apparent_encoding))
@@ -1273,7 +1274,6 @@ def permanent_redirect():
     except requests.RequestException as e:
         print("Permanent Redirect Assertion is Failed in Response Is Permanent Redirect Due To : " + str(e))
 permanent_redirect()
-
 def is_redirect():
     print("response.is_redirect:")
     print("\t" + str(response.is_redirect))
