@@ -1384,8 +1384,8 @@ def response_json():
     except requests.RequestException as e:
         print("Main Key Assertion is Failed in Response Json Due To : " + str(e))
     try:
-        if 'Clouds' in str(response.json()):
-            assert 'Clouds' in str(response.json())
+        if 'Clouds' in str(response.json()['main']):
+            assert 'Clouds' in str(response.json()['main'])
             print("Main Key's Value Assertion is Passed in Response Json")
         else:
             print("Main Key's Value Assertion is Failed in Response Json")
@@ -1400,8 +1400,8 @@ def response_json():
     except requests.RequestException as e:
         print("Description Key Assertion is Failed in Response Json Due To : " + str(e))
     try:
-        if "broken clouds" in str(response.json()):
-            assert "broken clouds" in str(response.json())
+        if "broken clouds" in str(response.json()['weather']):
+            assert "broken clouds" in str(response.json()['weather'])
             print("Description Key's Value Assertion is Passed in Response Json")
         else:
             print("Description Key's Value Assertion is Failed in Response Json")
@@ -1416,8 +1416,8 @@ def response_json():
     except requests.RequestException as e:
         print("Icon Key Assertion is Failed in Response Json Due To : " + str(e))
     try:
-        if "04n" in str(response.json()):
-            assert "04n" in str(response.json())
+        if "04d" in str(response.json()['weather']):
+            assert "04d" in str(response.json()['weather'])
             print("Icon Key's Value Assertion is Passed in Response Json")
         else:
             print("Icon Key's Value Assertion is Failed in Response Json")
